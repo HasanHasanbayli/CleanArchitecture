@@ -7,8 +7,8 @@ namespace Infrastructure.Persistence.Contexts;
 
 public class ApplicationDbContext : DbContext
 {
-    private readonly IDateTimeService _dateTime;
     private readonly IAuthenticatedUserService _authenticatedUser;
+    private readonly IDateTimeService _dateTime;
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IDateTimeService dateTime,
         IAuthenticatedUserService authenticatedUser) : base(options)

@@ -29,22 +29,22 @@ public class EmailService : IEmailService
             email.To.Add(MailboxAddress.Parse(request.To));
 
             email.Subject = request.Subject;
-            
+
             var builder = new BodyBuilder
             {
                 HtmlBody = request.Body
             };
-            
+
             email.Body = builder.ToMessageBody();
-            
+
             using var smtp = new SmtpClient();
-            
+
             await smtp.ConnectAsync(_mailSettings.SmtpHost, _mailSettings.SmtpPort, SecureSocketOptions.StartTls);
-            
+
             await smtp.AuthenticateAsync(_mailSettings.SmtpUser, _mailSettings.SmtpPass);
-            
+
             await smtp.SendAsync(email);
-            
+
             await smtp.DisconnectAsync(true);
         }
         catch (Exception ex)
