@@ -12,15 +12,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers" />
-      <Folder Include="Extensions" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Application\Application.csproj" />
-      <ProjectReference Include="..\Infrastructure.Identity\Infrastructure.Identity.csproj" />
-      <ProjectReference Include="..\Infrastructure.Persistence\Infrastructure.Persistence.csproj" />
-      <ProjectReference Include="..\Infrastructure.Shared\Infrastructure.Shared.csproj" />
+        <ProjectReference Include="..\Application\Application.csproj" />
+        <ProjectReference Include="..\Infrastructure.Identity\Infrastructure.Identity.csproj" />
+        <ProjectReference Include="..\Infrastructure.Persistence\Infrastructure.Persistence.csproj" />
+        <ProjectReference Include="..\Infrastructure.Shared\Infrastructure.Shared.csproj" />
     </ItemGroup>
 
 </Project>
