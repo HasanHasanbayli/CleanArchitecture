@@ -7,7 +7,20 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Controllers" />
+      <Folder Include="Extensions" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Application\Application.csproj" />
+      <ProjectReference Include="..\Infrastructure.Identity\Infrastructure.Identity.csproj" />
+      <ProjectReference Include="..\Infrastructure.Persistence\Infrastructure.Persistence.csproj" />
+      <ProjectReference Include="..\Infrastructure.Shared\Infrastructure.Shared.csproj" />
     </ItemGroup>
 
 </Project>
